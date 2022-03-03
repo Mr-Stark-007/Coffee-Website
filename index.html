@@ -38,6 +38,35 @@
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
         <div class="fas fa-bars" id="menu-btn"></div>
     </div>
+    <!-- Light/Dark section starts -->
+    <style>
+        body {
+          padding: 25px;
+          background-color: rgb(10, 10, 10);
+          color: black;
+          font-size: 25px;
+        }
+        
+        .dark-mode {
+          background-color: rgb(250, 245, 245);
+          color: white;
+        }
+        </style>
+        </head>
+        <body>
+                
+        <button onclick="myFunction()">Light/Dark mode</button>
+        
+        <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+        
+        </body>
+     <!-- Light/Dark section ends -->
+
 
     <div class="search-form">
         <input type="search" id="search-box" placeholder="search here...">
