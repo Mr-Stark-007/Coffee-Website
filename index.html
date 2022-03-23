@@ -11,6 +11,43 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+          padding: 25px;
+          background-color: rgb(10, 10, 10);
+          color:white;
+          font-size: 25px;
+        }
+        
+        .dark-mode {
+          background-color: rgb(250, 245, 245);
+          color: black;
+        }
+        #coupon{
+      height: 568px;
+      width: 573px;
+      background-image: url(images/coupon.jpg);
+      z-index: 100;
+      margin: auto;
+      position: absolute;
+      margin-left: 25%;
+      margin-top: 39%;
+      visibility: hidden;
+    }
+    </style>
+     <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+     function loadCoupon(){
+         document.getElementById('coupon').style.visibility='visible'
+     }
+     function closeCoupon(){
+         document.getElementById('coupon').style.visibility='hidden'
+     }
+        </script>
+        
 
 </head>
 <body>
@@ -39,38 +76,14 @@
         <div class="fas fa-bars" id="menu-btn"></div>
     </div>
     <!-- Light/Dark section starts -->
-    <style>
-        body {
-          padding: 25px;
-          background-color: rgb(10, 10, 10);
-          color: black;
-          font-size: 25px;
-        }
-        
-        .dark-mode {
-          background-color: rgb(250, 245, 245);
-          color: white;
-        }
-        </style>
-        </head>
-        <body>
-                
-        <button onclick="myFunction()">Light/Dark mode</button>
-        
-        <script>
-        function myFunction() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
-        </script>
-        
-        </body>
+    <button onclick="myFunction()">Light/Dark mode</button>
      <!-- Light/Dark section ends -->
-
-
     <div class="search-form">
         <input type="search" id="search-box" placeholder="search here...">
         <label for="search-box" class="fas fa-search"></label>
+    </div>
+    <div id="coupon">
+        <button onClick="closeCoupon()">&times;</button>
     </div>
 
     <div class="cart-items-container">
@@ -462,6 +475,9 @@
     <div class="credit">created with love by <span>Mr Stark Developer</span> | all rights reserved</div>
 
 </section>
+<script>
+    window.onload=loadCoupon();
+  </script>
 
 <!-- footer section ends -->
 
